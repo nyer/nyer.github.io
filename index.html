@@ -5,6 +5,6 @@ title: a blog
 
 <ul>
     {% for post in site.posts %}
-      <li><a href="{{ base_url }}{{ post.url}}"</a></li>
+      <li><a href="{{ site.baseurl }}{{ post.url}}">{{post.title}}</a></li>
     {% endfor %}
 </ul>
