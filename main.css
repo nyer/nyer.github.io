@@ -20,7 +20,7 @@ a:hover {
 }
 
 #container {
-    width: 760px;
+    width: 650px;
     margin: 10px auto;
     border: 1px solid black;
 }
@@ -30,7 +30,7 @@ h1#title {
     line-height: 50px;
     font-size: 2em;
     height: 50px;
-    color: grey;
+    color: black;
 }
 
 #content {
