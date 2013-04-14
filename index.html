@@ -1,1 +1,10 @@
-Well, This is My Home Page
+---
+layout: default
+title: a blog
+---
+
+<ul>
+    {% for post in site.posts %}
+      <li><a href="{{ base_url }}{{ post.url}}"</a></li>
+    {% endfor %}
+</ul>
