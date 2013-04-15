@@ -27,8 +27,8 @@ Well, i dig the freemarker servlet, and i found some source code:
 
 The code above does such a work: it gets a attribute named `content_type` 
 of the template, and check if the attribute exists, if it exists, then 
-set the contentType of the response.
-well, the problem seems to be solved. just add
+set the contentType with the attribute value.
+Well, the problem seems to have been solved. Just add
 
 	<#ftl attributes={"content_type" : "application/vnd.ms-excel;charset=utf-8"}
 
