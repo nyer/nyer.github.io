@@ -1,6 +1,4 @@
-* {
-    margin: 0px;
-    padding: 0px;
+body {
     font-family: georgia, sans-serif;
     text-align: left;
 }
@@ -20,7 +18,7 @@ a:hover {
 }
 
 #container {
-    width: 650px;
+    width: 50%;
     margin: 10px auto;
     border: 1px solid black;
 }
