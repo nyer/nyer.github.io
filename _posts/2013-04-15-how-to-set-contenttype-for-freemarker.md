@@ -15,8 +15,8 @@ So it is common to set the content-type with the request.
 
 	request.setContentType("application/vnd.ms-excel;charset=utf-8")
 
-However, when we request the action, we find that the content-type of 
-the response is `text/html`, that doesn't work. What is wrong with that?
+When we have a request, we find that the content-type of 
+the response is `text/html`, and that doesn't work. What is wrong with that?
 Well, i dig the freemarker servlet, and i found some source code:
 
 	Object attrContentType = template.getCustomAttribute("content_type");
