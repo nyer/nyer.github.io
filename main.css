@@ -35,8 +35,15 @@ h1#title {
     padding:10px 50px;
 }
 
+pre {
+	font-size: 70%;
+	background-color: Ivory;
+	padding: 4px;
+	line-height: 120%;
+	margin-left:10px;
+	width: 90%;
+}
 
-
-
-
-
+code {
+	font-family:Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy;
+}
