@@ -24,12 +24,18 @@ Well, i dig the freemarker servlet, and i found some source code:
 		response.setContentType(attrContentType.toString());
 	}
 	else {
-			//....
+			if (noCharsetInContentType) {
+            response.setContentType(
+                    contentType + "; charset=" + template.getEncoding());
+        } else {
+            response.setContentType(contentType);
+     }
 	}
 
 The code above does such a work: it gets a attribute named `content_type` 
 of the template, and check if the attribute exists, if it exists, then 
-set the contentType with the attribute value.
+set the contentType with the attribute value, or set it with the default content-type,
+which is default to `text/html`.
 Well, the problem seems to have been solved. Just add
 
 	<#ftl attributes={"content_type" : "application/vnd.ms-excel;charset=utf-8"}
