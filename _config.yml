@@ -1,3 +1,4 @@
+baseurl: http://nyer.github.io
 root: /
 permalink: /:year/:month/:day/:title.html
 markdown: rdiscount
