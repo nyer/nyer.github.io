@@ -8,8 +8,8 @@ title: 在ubuntu下利用iptables端口转发本地80端口访问tomcat服务
 首先查看iptables的端口转发功能是否开启。打开`/etc/sysctl.conf`，查找行`net.ipv4.ip_forward`是否等于1,如果不是将其改为1，然后保存。
 
 然后运行以下命令：
-	`iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080`
-	`iptables -t nat -A OUTPUT -d localhost -p tcp --dport 80 -j REDIRECT --to-ports 8080`
+	iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 8080
+	iptables -t nat -A OUTPUT -d localhost -p tcp --dport 80 -j REDIRECT --to-ports 8080
 然后运行`iptables -t nat -L -v`来查看转发项是否已经添加，以下是我的输出：
 	Chain PREROUTING (policy ACCEPT 4492 packets, 810K bytes)
 	 pkts bytes target     prot opt in     out     source               destination
